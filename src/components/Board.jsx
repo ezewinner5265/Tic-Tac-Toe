@@ -29,6 +29,10 @@ const Board = ({ xIsNext, squares, onPlay }) => {
   }
   return (
     <>
+      <div>
+        <h1>TIC TAC TOE</h1>
+        <p>A 2 Player Game</p>
+      </div>
       <div className="status">{status}</div>
       {Array.from({ length: 3 }, (_, row) => (
         <div key={row} className="board-row">
