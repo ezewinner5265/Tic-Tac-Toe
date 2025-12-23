@@ -17,6 +17,11 @@ const Game = () => {
     setCurrentMove(nextMove);
   }
 
+  function startNewGame() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
+
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -54,6 +59,7 @@ const Game = () => {
           >
             Next
           </button>
+          <button onClick={startNewGame}>New Game</button>
         </div>
       </div>
     </>
